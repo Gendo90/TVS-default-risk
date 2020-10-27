@@ -5,3 +5,7 @@
   #padding{
       background-color: white;
   }
+
+  .input_size{
+      width: 12em;
+  }
