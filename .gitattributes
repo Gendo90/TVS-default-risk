@@ -1,2 +1,1 @@
-logistic_regression_oversample.sav filter=lfs diff=lfs merge=lfs -text
-*.sav
+*.sav filter=lfs diff=lfs merge=lfs -text
