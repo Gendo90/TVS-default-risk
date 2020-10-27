@@ -1,0 +1,3 @@
+ML/model_notebooks/__pycache__/*
+ML/model_notebooks/feature_assessment/.ipynb_checkpoints/*
+ML/model_notebooks/model_creation/.ipynb_checkpoints/*
