@@ -6,11 +6,16 @@ the results in JSON format.
 '''
 
 # Import libraries
+from sklearn.preprocessing import MinMaxScaler
 import numpy as np
 from flask import Flask, render_template, request, jsonify
 import joblib
 from equi_loans import equi_loans_val
 import xgboost
+
+#setup predictions from model
+scaler_filename = 'full_data_scaler.save'
+X_scaler = joblib.load(scaler_filename)
 
 app = Flask(__name__)
 
@@ -30,10 +35,16 @@ def predict():
         #data = request.get_json(force=True)
         checker = [a for a in request.form.keys()]
         print(checker)
-        # data = float(request.form['exp'])
-        # print("Data", model.predict([[data]]))
+        data_cols = ['EMI', 'loan_amount', 'maximum_amount_sanctioned', 'age', 'rate_of_interest',
+                     'past_due_30', 'number_of_loans', 'maximum_sanctioned', 'past_due_90', 'tenure', 
+                     'times_bounced']
+        data = [request.form[a] for a in data_cols]
+        data = X_scaler.transform(data)
+        
         # Make prediction using model loaded from disk as per the data.
-        # prediction = model.predict([[data]])
+        prediction = model.predict([data])
+
+        print("Data", prediction)
 
         # Take the first value of prediction
         # output = prediction[0]
