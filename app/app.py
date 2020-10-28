@@ -40,16 +40,16 @@ def predict():
                      'times_bounced']
         data = [request.form[a] for a in data_cols]
         # print(data)
-        try:
-            data = X_scaler.transform(data)
-            
-            # Make prediction using model loaded from disk as per the data.
-            prediction = model.predict(data)[0]
+        # try:
+        data = X_scaler.transform([data])
+        
+        # Make prediction using model loaded from disk as per the data.
+        prediction = model.predict(data)[0]
 
-            print("Data", prediction)
+        print("Data", prediction)
 
-        except ValueError:
-            prediction = 2
+        # except ValueError:
+        #     prediction = 2
 
         outcomes = {
             0: "Default risk sufficiently low.",
