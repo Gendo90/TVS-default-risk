@@ -8,11 +8,9 @@
   }
 
   #form2{ 
-        margin-left: 35%;
-        margin-right: 35%;
+        margin-left: 30%;
+        margin-right: 30%;
         padding: 2% 2%;
-        border: 4px ridge  rgba(150, 149, 149, 0.705);
-        background: rgb(201, 200, 200);  
         background-clip: padding-box;   
   }
   .col-md-6{
@@ -22,4 +20,16 @@
   .form-control{
       width: 6em;
 
+  }
+
+  .form-row{
+    border: 2px ridge  rgb(216, 216, 247);
+    border-radius: 10px;
+    background: rgb(224, 224, 224); 
+    padding-top:1em;
+    padding-bottom: 1em;
+  }
+
+  #body{
+      background-color: rgb(228, 228, 247);
   }
