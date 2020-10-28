@@ -35,7 +35,7 @@ def predict():
         #data = request.get_json(force=True)
         # checker = [a for a in request.form.keys()]
         # print(checker)
-        data_cols = ['EMI', 'loan_amount', 'maximum_amount_sanctioned', 'age', 'rate_of_interest',
+        data_cols = ['emi', 'loan_amount', 'maximum_amount_sanctioned', 'age', 'rate_of_interest',
                      'past_due_30', 'max_mob', 'past_due_60', 'number_of_loans', 'maximum_sanctioned', 'past_due_90', 'tenure',
                      'times_bounced']
         data = [request.form[a] for a in data_cols]
