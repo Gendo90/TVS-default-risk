@@ -39,10 +39,11 @@ def predict():
                      'past_due_30', 'number_of_loans', 'maximum_sanctioned', 'past_due_90', 'tenure', 
                      'times_bounced']
         data = [request.form[a] for a in data_cols]
+        print(data)
         data = X_scaler.transform(data)
         
         # Make prediction using model loaded from disk as per the data.
-        prediction = model.predict([data])
+        prediction = model.predict(data)
 
         print("Data", prediction)
 
