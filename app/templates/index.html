@@ -27,80 +27,96 @@
               </div>
               <form action="./predict" method="POST" id="form2">
                   <div class="form-row">
-                    <div class="col-md-6" >
-                      <label for="emi" class="input_size">EMI</label>
-                      <div class="input_size">
+                    <div class="col-md-12">
+                      <label for="emi"><strong>EMI: </strong></label>
                       <input type="text" id= "emi" class="form-control" placeholder="2432.0" name="EMI">
+                      
                     </div>
-                    </div>
-                    <div class="col-md-6" >
-                      <label for="loan_amount">Loan Amount</label>
-                      <input type="text" id="loan_amount" class="form-control" placeholder="46500.0" name="loan_amount">
                   </div>
-                  </div>
-
+                  <br>
                   <div class="form-row">
-                  <div class="col-md-6">
-                    <label for="maximum_amount_sanctioned">Maximum amount sanctioned for any Two wheeler loan</label>
-                    <input type="text" id= "maximum_amount_sanctioned" class="form-control" placeholder="46500.0" name="maximum_amount_sanctioned">
+                    <div class="col-md-12" >
+                      <label for="loan_amount"><strong>Loan Amount: </strong></label>
+                      <input type="text" id="loan_amount" class="form-control" placeholder="52000.0" name="loan_amount">
                   </div>
-                  <div class="col-md-6">
-                    <label for="age">Age at which customer has taken the loan</label>
-                    <input type="text" id="age" class="form-control" placeholder="40.0" name="age">
                   </div>
-                </div>
-
+                  <br>
+                  <div class="form-row">
+                    <div class="col-md-12">
+                      <label for="maximum_amount_sanctioned"><strong>Maximum amount sanctioned for any Two wheeler loan: </strong></label>
+                      <input type="text" id= "maximum_amount_sanctioned" class="form-control" placeholder="46500.0" name="maximum_amount_sanctioned">
+                    </div>
+                  </div>
+                  <br>
+                  <div class="form-row">
+                    <div class="col-md-12">
+                      <label for="age"><strong>Age at which customer has taken the loan: </strong></label>
+                      <input type="text" id="age" class="form-control" placeholder="40.0" name="age">
+                    </div>
+                  </div>
+                  <br>
                 <div class="form-row">
-                  <div class="col-md-6">
-                    <label for="rate_of_interest">Rate of Interest</label>
+                  <div class="col-md-12">
+                    <label for="rate_of_interest"><strong>Rate of Interest: </strong></label>
                     <input type="text" id= "rate_of_interest" class="form-control" placeholder="12.75" name="rate_of_interest">
                   </div>
-                  <div class="col-md-6">
-                    <label for="past_due_30">Number of times 30 days past due in last 6 months</label>
-                    <input type="text" id="past_due_30" class="form-control" placeholder="31" name="past_due_30">
+                </div>
+                <br>
+                <div class="form-row">
+                  <div class="col-md-12">
+                    <label for="past_due_30"><strong>Number of times 30 days past due in last 6 months: </strong></label>
+                    <input type="text" id="past_due_30" class="form-control" placeholder="4" name="past_due_30">
                   </div>
                 </div>
-
+                <br>
                 <div class="form-row">
-                <div class="col-md-6">
-                  <label for="max_mob">Maximum MOB (Month of business with TVS Credit)</label>
-                  <input type="text" id= "max_mob" class="form-control" placeholder="12.75" name="max_mob">
-                </div>
-                <div class="col-md-6">
-                  <label for="past_due_60">Number of times 60 days past due in last 3 months</label>
-                  <input type="text" id= "past_due_60" class="form-control" placeholder="12.75" name="past_due_60">
+                <div class="col-md-12">
+                  <label for="max_mob"><strong>Maximum MOB (Month of business with TVS Credit): </strong></label>
+                  <input type="text" id= "max_mob" class="form-control" placeholder="12.0" name="max_mob">
                 </div>
               </div>
-
+              <br>
+              <div class="form-row">
+                <div class="col-md-12">
+                  <label for="past_due_60"><strong>Number of times 60 days past due in last 6 months: </strong></label>
+                  <input type="text" id= "past_due_60" class="form-control" placeholder="1" name="past_due_60">
+                </div>
+              </div>
+              <br>
                 <div class="form-row">
-                  <div class="col-md-6">
-                    <label for="number_of_loans">Number of loans</label>
-                    <input type="text" id= "number_of_loans" class="form-control" placeholder="12.75" name="number_of_loans">
-                  </div>
-                  <div class="col-md-6">
-                    <label for="maximum_sanctioned">Maximum amount sanctioned in the Live loans</label>
-                    <input type="text" id="maximum_sanctioned" class="form-control" placeholder="31" name="maximum_sanctioned">
+                  <div class="col-md-12">
+                    <label for="number_of_loans"><strong>Number of loans: </strong></label>
+                    <input type="text" id= "number_of_loans" class="form-control" placeholder="6" name="number_of_loans">
                   </div>
                 </div>
-
-                <div class="form-row">
-                  <div class="col-md-6">
-                    <label for="past_due_90">Number of times 90 days past due in last 3 months</label>
-                    <input type="text" id= "past_due_90" class="form-control" placeholder="12.75" name="past_due_90">
-                  </div>
-                  <div class="col-md-6">
-                    <label for="tenure">Tenure</label>
-                    <input type="text" id="tenure" class="form-control" placeholder="31" name="tenure">
+                <br>
+                <div class="form-row"> 
+                  <div class="col-md-12">
+                    <label for="maximum_sanctioned"><strong>Maximum amount sanctioned in the Live loans: </strong></label>
+                    <input type="text" id="maximum_sanctioned" class="form-control" placeholder="115456.0" name="maximum_sanctioned">
                   </div>
                 </div>
+                <br>
 
                 <div class="form-row">
-                    <div class="col-md-6">
-                      <label for="times_bounced">Number of times bounced while repaying the loan</label>
-                      <input type="text" id= "times_bounced" class="form-control" placeholder="12.75" name="times_bounced">
+                  <div class="col-md-12">
+                    <label for="past_due_90"><strong>Number of times 90 days past due in last 3 months: </strong></label>
+                    <input type="text" id= "past_due_90" class="form-control" placeholder="2" name="past_due_90">
+                  </div>
+                </div>
+                <br>
+                <div class="form-row">
+                  <div class="col-md-12">
+                    <label for="tenure"><strong>Tenure: </strong></label>
+                    <input type="text" id="tenure" class="form-control" placeholder="24.0" name="tenure">
+                  </div>
+                </div>
+                <br>
+                <div class="form-row">
+                    <div class="col-md-12">
+                      <label for="times_bounced"><strong>Number of times bounced while repaying the loan: </strong></label>
+                      <input type="text" id= "times_bounced" class="form-control" placeholder="2.0" name="times_bounced">
                     </div>
-                   <div class="col-md-6">                        
-                   </div>
                 </div>
                 <br>
                 <div class="form-row">
