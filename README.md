@@ -22,3 +22,7 @@ To start identifying high-impact variables on default risk, a random forest was 
 ## Findings
 
 ## Planned Features
+
+As discussed in the findings, the gradient-boosted trees give the best results for this particular use-case of ML. However, a "better" model (one identifies more potential defaulters at a lower cost of non-defaulters) may be possible using neural networks. The next steps in developing a personal loan customer screening process involve creating a variety of neural networks using different parameters to determine whether or not they make the process more accurate and/or comprehensive.
+
+Additionally, the app itself could be improved by implementing front-end barriers to submitting the form if the input fields are invalid - by using JavaScript and basic input validation techniques.
