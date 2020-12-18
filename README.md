@@ -23,17 +23,17 @@ To start identifying high-impact variables on default risk, a random forest was 
 
 Once the above ML models were created, they needed to be evaluated in a standard way, to get an overall "score" of how good the model was for minimizing default risk while making the same or more money from lending overall. Additionally, the data was imbalanced, with two classes (defaulter or non-defaulter) that have a ratio of approximately 1:50 in the dataset provided, corresponding to ~2% default rate. So using a cost function that prioritizes accuracy - that is, the model correctly identifies as many items as possible - has the unfortunate result of simply classifying **all** the loan customers as non-defaulters because this will result in ~98% accuracy rate of the classification model. 
 
-Instead, a deeper dive into the economic costs of loans defaulting vs. being repaid was required. The results were that each default loan was worth approximately 5 non-default loans, given the total amount lost by a default loan and the total profit on a non-default loan - to see the calculations of the loan values and the ratio, see [here](./cleaned_data/Dataset\ Financial\ Exploration\ Notebook.ipynb). This result guided the creation of a cost function of 
+Instead, a deeper dive into the economic costs of loans defaulting vs. being repaid was required. The results were that each default loan was worth approximately 5 non-default loans, given the total amount lost by a default loan and the total profit on a non-default loan - to see the calculations of the loan values and the ratio, see [here](./cleaned_data/Dataset%20Financial%20Exploration%20Notebook.ipynb). This result guided the creation of a scoring function of 
 ```
-cost = d1 - 5*d2
+scoring = d1 - 5*d2
 ```
-where `d1` is the number of defaulters correctly identified by the model and `d2` is the number of customers who were identified as a default risk who did not actually default. This function was later modified to increase the coverage of the defaulters by adding an accuracy multiplier (which weights the function so that given the same overall cost, if more defaulters are correctly identified, then the one with greater coverage is "better" to the model). This can be seen as giving the final cost function:
+where `d1` is the number of defaulters correctly identified by the model and `d2` is the number of customers who were identified as a default risk who did not actually default. This function was later modified to increase the coverage of the defaulters by adding an accuracy multiplier (which weights the function so that given the same overall score, if more defaulters are correctly identified, then the one with greater coverage is "better" to the model). This can be seen as giving the final scoring function:
 ```
-cost = (d1/d_total)*(d1 - 5*d2)
+scoring = (d1/d_total)*(d1 - 5*d2)
 ```
 where `d_total` is the total number of defaulters in the dataset. This equation was particularly useful in guiding the construction fo the random forests and gradient-boosted trees.
 
-The ML models based on the algorithms [above](##ML\ Models\ Used) were all evaluated against one another, and the results of that comparison showed the gradient-boosted trees maximizing the cost function compared to the other models, and therefore giving the greatest economic gain (profit) to the lender. 
+The ML models based on the algorithms [above](#ml-models-used) were all evaluated against one another, and the results of that comparison showed the gradient-boosted trees maximizing the scoring function compared to the other models, and therefore giving the greatest economic gain (profit) to the lender. 
 
 ## Planned Features
 
